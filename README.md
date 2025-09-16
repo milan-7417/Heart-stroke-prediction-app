@@ -1,6 +1,6 @@
 # Heart Stroke Prediction Web App
 
-![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.13.5-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.25-orange.svg)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
