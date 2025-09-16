@@ -7,12 +7,6 @@
 
 A user-friendly web application built with Streamlit to predict the likelihood of a heart stroke based on key health indicators. The prediction is powered by a trained Logistic Regression model.
 
-## Demo
-
-*[IMPORTANT: Add a screenshot or a short GIF of your running application here!]*
-
-![App Screenshot](assets/screenshot.png) 
-
 ## Features
 
 -   *Interactive Interface:* Users can input their health metrics using sliders and select boxes.
