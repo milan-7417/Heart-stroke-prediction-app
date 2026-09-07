@@ -1,67 +1,358 @@
-# Heart Stroke Prediction Web App
+# 🫀 Heart Stroke Prediction Web App
 
-![Python](https://img.shields.io/badge/Python-3.13.5-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.25-orange.svg)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.13.5-3776AB?logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Streamlit-1.25-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit"/>
+  <img src="https://img.shields.io/badge/Scikit--learn-1.3-F7931E?logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
+  <img src="https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Joblib-Model%20Serialization-2C3E50" alt="Joblib"/>
+  <img src="https://img.shields.io/badge/Docker-Dockerized-2496ED?logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Docker%20Hub-Image%20Registry-2496ED?logo=docker&logoColor=white" alt="Docker Hub"/>
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-46E3B7?logo=render&logoColor=white" alt="Render"/>
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"/>
+</p>
 
-A user-friendly web application built with Streamlit to predict the likelihood of a heart stroke based on key health indicators. The prediction is powered by a trained Logistic Regression model.
+A user-friendly machine learning web application that predicts the likelihood of **heart stroke** based on key health and demographic indicators.
 
-## Features
+The application uses a trained **Logistic Regression** model to generate predictions from user-provided health information and provides an intuitive interface built with **Streamlit**.
 
--   *Interactive Interface:* Users can input their health metrics using sliders and select boxes.
--   *Real-time Predictions:* Instantly get a prediction on stroke risk.
--   *Data-Driven:* Utilizes a machine learning model trained on health data.
--   *Easy to Use:* Simple and clean user interface for non-technical users.
+The application has been **Dockerized and deployed on Render**, making it available as a containerized web service.
 
-## Technology Stack
+---
 
--   *Backend & ML:* Python, Scikit-learn, Pandas, Joblib
--   *Frontend:* Streamlit
--   *Data Analysis:* Jupyter Notebook, Matplotlib, Seaborn
+## 🌐 Live Demo
 
-## Setup and Installation
+🚀 **Live Application:**
+`<YOUR_RENDER_URL>`
 
-Follow these steps to run the project on your local machine.
+---
 
-### Prerequisites
+## 📌 Project Overview
 
--   Python 3.8 or higher
--   Git for version control
+Stroke is a serious health condition where early identification of potential risk factors can be valuable.
 
-### Installation Steps
+This project demonstrates how a machine learning model can be integrated into an interactive web application to estimate stroke risk based on user-provided health indicators.
 
-1.  *Clone the repository:*
-    bash
-    git clone [https://github.com/](https://github.com/)[your-username]/[your-repo-name].git
-    cd [your-repo-name]
-    
+The application allows users to enter relevant health information and receive a prediction instantly.
 
-2.  *Create and activate a virtual environment:*
+> ⚠️ **Disclaimer:** This application is intended for educational and demonstration purposes only. It is not a medical diagnostic tool and should not be used as a substitute for professional medical advice.
 
-    -   **Using conda (Recommended):**
-        bash
-        conda create --name stroke-env python=3.9
-        conda activate stroke-env
-        
+---
 
-    -   **Using venv:**
-        bash
-        python -m venv venv
-        # On Windows
-        .\venv\Scripts\activate
-        # On macOS/Linux
-        source venv/bin/activate
-        
+## ✨ Features
 
-3.  *Install the required dependencies:*
-    bash
-    pip install -r requirements.txt
-    
+* **Interactive User Interface** — Simple and intuitive Streamlit interface for entering health information.
+* **Machine Learning Prediction** — Uses a trained Logistic Regression model to predict stroke risk.
+* **Real-Time Inference** — Generates predictions immediately after submitting the input.
+* **User-Friendly Design** — Designed for users without a technical background.
+* **Containerized Deployment** — Packaged into a Docker image for consistent and reproducible deployment.
+* **Cloud Deployment** — Docker container deployed and running on Render.
 
-## How to Run the App
+---
 
-Once the dependencies are installed, you can run the Streamlit app with the following command:
+## 🛠️ Technology Stack
+
+### 🐍 Programming & Machine Learning
+
+* **Python 3.13.5**
+* **Scikit-learn 1.3**
+* **Pandas**
+* **Joblib**
+* **Logistic Regression**
+
+### 🎨 Frontend & Application
+
+* **Streamlit 1.25**
+
+### 📊 Data Analysis & Visualization
+
+* **Jupyter Notebook**
+* **Matplotlib**
+* **Seaborn**
+
+### 🐳 Deployment & Infrastructure
+
+* **Docker**
+* **Docker Hub**
+* **Render**
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+                         User
+                          │
+                          ▼
+                 ┌─────────────────┐
+                 │   Render Cloud  │
+                 │                 │
+                 │  Docker         │
+                 │  Container      │
+                 │       │         │
+                 │       ▼         │
+                 │   Streamlit     │
+                 │       │         │
+                 │       ▼         │
+                 │  ML Prediction  │
+                 │       │         │
+                 │       ▼         │
+                 │ Logistic        │
+                 │ Regression      │
+                 └─────────────────┘
+                          │
+                          ▼
+                  Stroke Risk Result
+```
+
+### Deployment Workflow
+
+```text
+Source Code
+     │
+     ▼
+ Dockerfile
+     │
+     ▼
+ Docker Image
+     │
+     ▼
+ Docker Hub
+     │
+     ▼
+ Render
+     │
+     ▼
+ Running Docker Container
+     │
+     ▼
+ Streamlit Web Application
+```
+
+---
+
+## 🐳 Dockerization
+
+The application is packaged using Docker to provide a consistent and reproducible runtime environment containing the application code, Python environment, dependencies, and trained model.
+
+The container:
+
+1. Uses a Python base image.
+2. Sets the application working directory.
+3. Copies the project files into the container.
+4. Installs dependencies from `requirements.txt`.
+5. Exposes the Streamlit port.
+6. Starts the Streamlit application.
+
+The application runs with:
 
 ```bash
 streamlit run app.py
+```
+
+---
+
+## ☁️ Deployment on Render
+
+The application is deployed on **Render as a Docker-based web service**.
+
+The Docker image is deployed as a running container, which serves the Streamlit application to users over the web.
+
+```text
+GitHub Repository
+        │
+        ▼
+    Dockerfile
+        │
+        ▼
+   Docker Image
+        │
+        ▼
+    Docker Hub
+        │
+        ▼
+      Render
+        │
+        ▼
+ Docker Container
+        │
+        ▼
+ Streamlit Application
+```
+
+---
+
+## 💻 Run Locally Without Docker
+
+### Prerequisites
+
+* Python 3.9+
+* Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<your-repository>.git
+cd <your-repository>
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+On macOS/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The application will typically be available at:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 🐳 Run Using Docker
+
+### 1. Build the Docker Image
+
+```bash
+docker build -t heart-stroke-prediction .
+```
+
+### 2. Run the Container
+
+```bash
+docker run -p 8501:8501 heart-stroke-prediction
+```
+
+### 3. Open the Application
+
+Visit:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+heart-stroke-prediction/
+│
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── model/
+│   └── model.pkl
+│
+├── notebooks/
+│   └── analysis.ipynb
+│
+├── dataset/
+│   └── dataset.csv
+│
+└── README.md
+```
+
+> The exact structure may vary depending on the files included in the repository.
+
+---
+
+## 🤖 Machine Learning Model
+
+The application uses **Logistic Regression** as the prediction model.
+
+```text
+Raw Dataset
+     │
+     ▼
+Data Cleaning
+     │
+     ▼
+Exploratory Data Analysis
+     │
+     ▼
+Feature Processing
+     │
+     ▼
+Model Training
+     │
+     ▼
+Logistic Regression
+     │
+     ▼
+Model Serialization
+     │
+     ▼
+Streamlit Application
+```
+
+---
+
+## 🔮 Prediction Workflow
+
+```text
+User Input
+    │
+    ▼
+Input Validation
+    │
+    ▼
+Feature Preparation
+    │
+    ▼
+Trained Logistic Regression Model
+    │
+    ▼
+Prediction
+    │
+    ▼
+Stroke Risk Result
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Improve UI/UX and visualizations.
+* Add automated model retraining.
+* Implement CI/CD for automated Docker builds and deployments.
+* Add comprehensive model evaluation metrics.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Milan Kumar**
+
+If you found this project useful or interesting, consider ⭐ starring the repository.
