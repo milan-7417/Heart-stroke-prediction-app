@@ -1,15 +1,13 @@
-# 🫀 Heart Stroke Prediction Web App
+<h1 align="center">🫀 Heart Stroke Prediction Web App</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.13.5-3776AB?logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Streamlit-1.25-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/Scikit--learn-1.3-F7931E?logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-  <img src="https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas&logoColor=white" alt="Pandas"/>
-  <img src="https://img.shields.io/badge/Joblib-Model%20Serialization-2C3E50" alt="Joblib"/>
-  <img src="https://img.shields.io/badge/Docker-Dockerized-2496ED?logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Docker%20Hub-Image%20Registry-2496ED?logo=docker&logoColor=white" alt="Docker Hub"/>
-  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-46E3B7?logo=render&logoColor=white" alt="Render"/>
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"/>
+  <img src="https://img.shields.io/badge/Python-3.13.5-3776AB?logo=python&logoColor=white" alt="Python" height="35"/>
+  <img src="https://img.shields.io/badge/Streamlit-1.25-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit" height="35"/>
+  <img src="https://img.shields.io/badge/Scikit--learn-1.3-F7931E?logo=scikit-learn&logoColor=white" alt="Scikit-learn" height="35"/>
+  <img src="https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas&logoColor=white" alt="Pandas" height="35"/>
+  <img src="https://img.shields.io/badge/Docker%20Hub-Image%20Registry-2496ED?logo=docker&logoColor=white" alt="Docker Hub" height="35"/>
+  <img src="https://img.shields.io/badge/Render-Cloud%20Deployment-46E3B7?logo=render&logoColor=white" alt="Render" height="35"/>
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" height="35"/>
 </p>
 
 A user-friendly machine learning web application that predicts the likelihood of **heart stroke** based on key health and demographic indicators.
@@ -17,13 +15,6 @@ A user-friendly machine learning web application that predicts the likelihood of
 The application uses a trained **Logistic Regression** model to generate predictions from user-provided health information and provides an intuitive interface built with **Streamlit**.
 
 The application has been **Dockerized and deployed on Render**, making it available as a containerized web service.
-
----
-
-## 🌐 Live Demo
-
-🚀 **Live Application:**
-`<YOUR_RENDER_URL>`
 
 ---
 
